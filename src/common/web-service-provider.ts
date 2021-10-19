@@ -27,6 +27,6 @@ class RealWebServiceProvider extends ServiceProvider {
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export const WebServiceProvider = ((vscode as unknown as MockVscodeApi).isMock ? 
     MockServiceProvider:
-    RealWebServiceProvider) as unknown as RealWebServiceProvider;
+    RealWebServiceProvider);
 
 
