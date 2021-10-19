@@ -1,0 +1,9 @@
+**/.*
+node_modules/
+webpack.*.js
+**/*.map
+
+src
+
+lib/examples
+lib/test
