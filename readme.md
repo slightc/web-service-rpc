@@ -11,7 +11,7 @@
 
 ## 安装
 
-```
+``` bash
 npm install vscode-webview-tool
 ```
 
@@ -21,7 +21,7 @@ npm install vscode-webview-tool
 
 #### 生成webview html
 
-```
+``` js
 import { getHtmlForWebview } from 'vscode-webview-tool';
 
 webview.html = getHtmlForWebview(context,'build/web','index.html');
@@ -37,7 +37,7 @@ context 为 vscode.ExtensionContext, 'build/web' 是web文件在项目下的路�
 
 #### 注册方法给html调用
 
-```
+``` js
 // vscode
 import { VscodeServiceProvider } from 'vscode-webview-tool'
 
@@ -63,7 +63,7 @@ serviceProvider.callService('common','something')
 
 #### 调用vscode插件注册的方法
 
-```
+``` js
 import { WebServiceProvider } from 'vscode-webview-tool/web'
 
 const serviceProvider = new WebServiceProvider()
@@ -73,7 +73,8 @@ serviceProvider.callService('common','something')
 #### 注册方法给vscode调用
 
 与vscode插件中一致
-```
+
+``` js
 // html
 import { WebServiceProvider } from 'vscode-webview-tool/web'
 

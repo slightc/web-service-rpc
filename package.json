@@ -1,7 +1,7 @@
 {
   "name": "vscode-webview-tool",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "create webview html and regist RPC",
   "main": "./lib/index.js",
   "scripts": {
     "prepublishOnly": "npm run compile",
@@ -10,8 +10,17 @@
     "lint": "eslint src --ext ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "slightc",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slightc/vscode-webview-tool"
+  },
+  "keywords": [
+    "vscode",
+    "webview",
+    "RPC"
+  ],
   "devDependencies": {
     "@types/node": "^16.11.1",
     "@types/vscode": "^1.61.0",
