@@ -99,7 +99,7 @@ serviceProvider.callService('common','something')
 获取了vscodeApi, 在非vscode环境也可以使用, 非vscode环境使用localStorage模拟State, 方便web调试
 
 ``` js
-import { vscode } from 'vscode-webview-tool'
+import { vscode } from 'vscode-webview-tool/web'
 
 vscode.postMessage('...')
 vscode.getState()
