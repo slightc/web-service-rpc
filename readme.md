@@ -94,6 +94,18 @@ const serviceProvider = new VscodeServiceProvider(webview)
 serviceProvider.callService('common','something')
 ```
 
+#### vscode api
+
+获取了vscodeApi, 在非vscode环境也可以使用, 非vscode环境使用localStorage模拟State, 方便web调试
+
+``` js
+import { vscode } from 'vscode-webview-tool'
+
+vscode.postMessage('...')
+vscode.getState()
+vscode.setState({ a:1, b:2 })
+```
+
 ## 示例项目
 
 issue催催就有示例了...
