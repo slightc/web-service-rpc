@@ -53,7 +53,7 @@ serviceProvider.provideService({
 })
 
 //html 调用
-import { WebServiceProvider } from 'vscode-webview-tool/web'
+import { WebServiceProvider } from 'vscode-webview-tool/lib/web'
 
 const serviceProvider = new WebServiceProvider()
 serviceProvider.callService('common','something')
@@ -64,7 +64,7 @@ serviceProvider.callService('common','something')
 #### 调用vscode插件注册的方法
 
 ``` js
-import { WebServiceProvider } from 'vscode-webview-tool/web'
+import { WebServiceProvider } from 'vscode-webview-tool/lib/web'
 
 const serviceProvider = new WebServiceProvider()
 serviceProvider.callService('common','something')
@@ -76,7 +76,7 @@ serviceProvider.callService('common','something')
 
 ``` js
 // html
-import { WebServiceProvider } from 'vscode-webview-tool/web'
+import { WebServiceProvider } from 'vscode-webview-tool/lib/web'
 
 const serviceProvider = new WebServiceProvider()
 serviceProvider.provideService({
@@ -99,7 +99,7 @@ serviceProvider.callService('common','something')
 获取了vscodeApi, 在非vscode环境也可以使用, 非vscode环境使用localStorage模拟State, 方便web调试
 
 ``` js
-import { vscode } from 'vscode-webview-tool/web'
+import { vscode } from 'vscode-webview-tool/lib/web'
 
 vscode.postMessage('...')
 vscode.getState()
