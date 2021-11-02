@@ -109,3 +109,7 @@ vscode.setState({ a:1, b:2 })
 ## 示例项目
 
 issue催催就有示例了...
+
+与vue一起使用 [work-with-vue](./examples/work-with-vue)
+
+与react一起使用
