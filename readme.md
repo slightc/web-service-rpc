@@ -39,7 +39,7 @@ context 为 vscode.ExtensionContext, 'build/web' 是web文件在项目下的路�
 
 ``` js
 // vscode
-import { VscodeServiceProvider } from 'vscode-webview-tool'
+import { VscodeServiceProvider, getHtmlForWebview } from 'vscode-webview-tool'
 
 webview.html = getHtmlForWebview(context,'build/web','index.html')
 
