@@ -15,6 +15,14 @@ import HelloWorld from './components/HelloWorld.vue' // will be error by Vetur, 
 import { WebServiceProvider } from 'vscode-webview-tool/lib/web'
 const serviceProvider = new WebServiceProvider()
 
+if (serviceProvider.isMock) {
+  serviceProvider.provideMockCallbackService({
+    'common': {
+      'getExtensionPath' : () => {return 'mock path'},
+    }
+  })
+}
+
 export default {
   name: 'App',
   components: {
