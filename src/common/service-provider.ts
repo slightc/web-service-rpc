@@ -49,7 +49,7 @@ export class ServiceProvider {
 
     callService<T = any>(service: string, method: string, ...args: any[]) {
         return new Promise<T>((resolve, reject) => {
-            const id = Number(setTimeout(null as any));
+            const id = Number(setTimeout(()=>{}));
             if (!id) {
                 reject(new Error('create call id failed'));
                 return;

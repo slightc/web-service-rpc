@@ -4,6 +4,7 @@ webpack.*.js
 **/*.map
 
 src
+examples
 
 lib/examples
 lib/test
