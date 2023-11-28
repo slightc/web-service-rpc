@@ -1,0 +1,14 @@
+{
+  "name": "web-iframes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd ../.. &&  npm run compile"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "web-service-rpc": "../.."
+	}
+}

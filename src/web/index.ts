@@ -1,1 +1,2 @@
-export * from '../common/web-service-provider';
+export * from "./child-service-provider";
+export * from "./parent-service-provider";

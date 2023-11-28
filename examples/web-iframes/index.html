@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var exports = {};
+        function require(name) {
+            return exports;
+        }
+    </script>
+    <script src="./node_modules/web-service-rpc/lib/common/service-provider.js"></script>
+    <script src="./node_modules/web-service-rpc/lib/web/parent-service-provider.js"></script>
+</head>
+
+<body>
+    <h1>Hello, this is parent-service</h1>
+    <div>
+        <iframe id="child" src="./child.html" onload="iframeOnload()"></iframe>
+    </div>
+    <button onclick="iframeOnload()">count</button>
+    <script>
+        const iframe = document.getElementById('child');
+        const parentService = new ParentServiceProvider(iframe.contentWindow);
+        function iframeOnload() {
+            parentService.callService('content.count').then((data) => {
+                console.log(data);
+            })
+        }
+    </script>
+</body>
+
+</html>

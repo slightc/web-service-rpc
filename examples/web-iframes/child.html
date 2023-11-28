@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var exports = {};
+        function require(name) {
+            return exports;
+        }
+    </script>
+    <script src="./node_modules/web-service-rpc/lib/common/service-provider.js"></script>
+    <script src="./node_modules/web-service-rpc/lib/web/child-service-provider.js"></script>
+</head>
+
+<body>
+    <h1>Hello, this is child-service</h1>
+    <div>count: <span id="countValue"">0</span></div>
+    <script>
+        const childService = new ChildServiceProvider(window.top);
+        let i = 0;
+        childService.provideService({
+            content: {
+                count() {
+                    const s = document.getElementById("countValue");
+                    s.innerText = i;
+                    return i++;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
